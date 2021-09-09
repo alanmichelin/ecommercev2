@@ -7,7 +7,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import { Button } from '@material-ui/core';
 const Item = ({data}) =>{
-    console.log(data)
+
     var nombre = data.nombreProducto
     var imagen = data.imagenProducto
     var descripcion = data.descriProducto
@@ -25,16 +25,12 @@ const Item = ({data}) =>{
         <Grid item xs={12} lg={2} >
         <div className={classes.root}>
             <Paper className={classes.paper}>
-                <Grid container spacing={2}>
-      
-        
-          
+                <Grid container spacing={2}>  
             <Grid item xs={4} lg={12} >
                 <img src={imagen} alt={nombre} className={classes.img} />
             </Grid>
             <Grid item xs={5} lg={12} >
                 <p className={classes.title}>{nombre}</p>
- 
                 <p className={classes.descripcion}>{descripcion}</p>
             </Grid>
             <Grid item xs={3} lg={12} >
@@ -48,18 +44,11 @@ const Item = ({data}) =>{
                  +
                 </Button>
                 </Grid>
-
-
-                
-
-
-                
-                
-    
-                
-                {/* <Button variant="outlined" color="primary">0</Button>
-                <Button variant="outlined" color="primary">-</Button> */}
-                {like ? <FavoriteIcon className={[classes.Icon, classes.like ]} onClick={changeLike}/>: <FavoriteBorderIcon className={[classes.Icon, classes.like ] } onClick={changeLike} />   }
+                {like ? 
+                <FavoriteIcon className={[classes.Icon, classes.like ]} onClick={changeLike}/>
+                :
+                 <FavoriteBorderIcon className={[classes.Icon, classes.like ] } onClick={changeLike} />
+                 }
                 <ShareIcon className={classes.Icon}/>
             </Grid>
         

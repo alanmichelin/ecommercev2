@@ -1,7 +1,8 @@
 import { Data } from "./fetchData"
 
 
-const ListaItems = (props,callback) =>{
+const ListaItems = (props) =>{
+    // busca los items por categoria
     const productos = Data("Productos")
     const productosAmostrar = []
     
@@ -10,9 +11,8 @@ const ListaItems = (props,callback) =>{
             productosAmostrar.push(productos[data])
         }
     }
-    // console.log(productosAmostrar)
-    callback = productosAmostrar
-    return callback
+
+    return productosAmostrar
 }
 
 

@@ -6,7 +6,7 @@ import Item from './Item';
 import Grid from '@material-ui/core/Grid';
 
 const Categorias = () =>{
-    console.log(Data())
+
     const [tablaIndex, setTablaIndex] =useState(0)
     const [items, setItems] = useState([])
     const totalCategorias = Data("Categorias")
